@@ -5,19 +5,24 @@
 	<title>Basic Example</title>
 	<link rel="stylesheet" href="../src/sassy-grid.css">
 	<link rel="stylesheet" href="assets/css/example-styles.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.css">
 </head>
 <body>
 	<header class="container">				
-		<div class="row">
+		<div class="row row--no-gutters">
 			<div class="col col--xs-full">
 				<div class="hero">
-					<h1>Sassy Grid!</h1>
-					<p>This is a <a href="#">Sass</a> based grid</p>
-					<a href="#" class="btn btn--cta"></a>
+					<div class="content-wrap">
+						<div class="content">
+							<h1>Sassy Grid!</h1>
+							<p>This is a <a href="#">Sass</a> based grid</p>
+							<a href="#" class="btn btn--cta">Download</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row row--no-gutters">
 			<div class="col col--xs-full">
 				<nav>
 					<ul>
@@ -38,22 +43,25 @@
 			</div>
 		</div>
 		<div class="row row--double-padded">
-			<div class="col col--sm-half col--md-quater">
+			<div class="col col--sm-full col--md-third">
 				<article>
+					<i class="fa fa-html5" aria-hidden="true"></i>
 					<h1>Stuff</h1>
 					<p>We do stuff, it involves things.  This makes us awesome</p>
 					<a class="btn" href="#">Read More</a>
 				</article>
 			</div>
-			<div class="col col--sm-half col--md-quater">
+			<div class="col col--sm-full col--md-third">
 				<article>
+					<i class="fa fa-css3" aria-hidden="true"></i>
 					<h1>Other Stuff</h1>
-					<p>We also do <em>other</em> stuff.  This is not our main foccus, but we're still awesome</p>
+					<p>We also do <em>other</em> stuff.  This is not our main focus, but we're still awesome</p>
 					<a class="btn" href="#">Read More</a>
 				</article>
 			</div>
-			<div class="col col--sm-half col--md-quater">
+			<div class="col col--sm-full col--md-third">
 				<article>
+					<i class="fa fa-git" aria-hidden="true"></i>
 					<h1>3<sup>rd</sup> Thing</h1>
 					<p>We do this too, we're not great at it, but we needed something to fill the row.</p>
 					<a class="btn" href="#">Read More</a>
@@ -61,31 +69,31 @@
 			</div>
 		</div>
 	</section>
-	<section class="container">
+	<section class="container container--instagram">
 		<div class="row">
 			<div class="col col--xs-full">
-				<h1>Follow us on catstagram&trade;</h1>
+				<h1>Follow us on strut-stagram&trade;</h1>
 			</div>
 		</div>
 		<div class="row row--no-gutters">
-			<div class="col col--lg-half col--md-quater col--sm-third col--xs-full"><img src="http://placekitten.com/800/600" alt="A kitty!" class="responsive"></div>
-			<div class="col col--lg-half col--md-quater col--sm-third col--xs-full"><img src="http://placekitten.com/800/600" alt="A kitty!" class="responsive"></div>
-			<div class="col col--lg-half col--md-quater col--sm-third col--xs-full"><img src="http://placekitten.com/800/600" alt="A kitty!" class="responsive"></div>
-			<div class="col col--lg-half col--md-quater col--sm-third col--xs-full"><img src="http://placekitten.com/800/600" alt="A kitty!" class="responsive"></div>
-			<div class="col col--lg-half col--md-quater col--sm-third col--xs-full"><img src="http://placekitten.com/800/600" alt="A kitty!" class="responsive"></div>
-			<div class="col col--lg-half col--md-quater col--sm-third col--xs-full"><img src="http://placekitten.com/800/600" alt="A kitty!" class="responsive"></div>
+			<div class="col col--lg-quater col--md-third col--sm-half col--xs-full"><img src="assets/img/i1.jpg" alt="Strut Intstagram" class="responsive"></div>
+			<div class="col col--lg-quater col--md-third col--sm-half col--xs-full"><img src="assets/img/i2.jpg" alt="Strut Intstagram" class="responsive"></div>
+			<div class="col col--lg-quater col--md-third col--sm-half col--xs-full"><img src="assets/img/i3.jpg" alt="Strut Intstagram" class="responsive"></div>
+			<div class="col col--lg-quater col--md-third col--sm-half col--xs-full"><img src="assets/img/i4.jpg" alt="Strut Intstagram" class="responsive"></div>
+			<div class="col col--lg-quater col--md-third col--sm-half col--xs-full"><img src="assets/img/i5.jpg" alt="Strut Intstagram" class="responsive"></div>
+			<div class="col col--lg-quater col--md-third col--sm-half col--xs-full"><img src="assets/img/i6.jpg" alt="Strut Intstagram" class="responsive"></div>
 		</div>
 	</section>
 	<footer class="container">
 		<div class="row">
 			<div class="col col-sm--full col--md-half col--center-me-plz">
-				<h1>Signup to our <del>bullshit spam</del> <ins>Newsletters</ins></h1>
 				<form action="#">
-					<input type="email"><button type="submit"></button>
+					<h1>Signup to our <del>bullshit spam</del> <ins>Newsletters</ins></h1>
+					<input type="email" placeholder="kooldude399@yahoo.com"><button type="submit">Sign Up!</button>
 				</form>
 			</div>
 		</div>
 	</footer>
-	<aside>Made with by <3 <a href="http://www.huntlycameron.co.uk">Huntly Cameron</a></aside>
+	<aside>Made with by <i class="fa fa-heart"></i> by <a href="http://www.huntlycameron.co.uk">Huntly Cameron</a></aside>
 </body>
 </html>

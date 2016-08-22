@@ -1,5 +1,4 @@
 /** Grid Vars **/
-$cols: 12;
 $gutter: 40px;
 $max-width: 1170px;
 
@@ -56,39 +55,34 @@ $breakpoint-lg: 1024px;
 	width: 100%;
 }
 
-.row--no-gutters > .col{
-	padding-left: 0;	
-	padding-right: 0;
-}
-
-.col--xs-half,
-.col--xs-third,
-.col--xs-quater{
+.row > .col--xs-half,
+.row > .col--xs-third,
+.row > .col--xs-quater{
 	float: left;	
 	padding-left: $gutter / 2;
 	padding-right: $gutter / 2;
 }
 
-.col--xs-full{
+.row > .col--xs-full{
 	width: 100%;
 }
 
-.col--xs-half{
+.row > .col--xs-half{
 	width: 100/2%;
 }
 
-.col--xs-third{
+.row > .col--xs-third{
 	width: 100/3%;
 }
 
-.col--xs-quater{
+.row > .col--xs-quater{
 	width: 100/4%;
 }
 
 @media (min-width: $breakpoint-sm){
-	.col--sm-half,
-	.col--sm-third,
-	.col--sm-quater{		
+	.row > .col--sm-half,
+	.row > .col--sm-third,
+	.row > .col--sm-quater{		
 		float: left;
 		padding-left: $gutter;
 		padding-right: 0;
@@ -101,27 +95,27 @@ $breakpoint-lg: 1024px;
 		padding-right: $gutter / 2
 	}	
 
-	.col--sm-full{
+	.row > .col--sm-full{
 		width: 100%;
 	}
 
-	.col--sm-half{
+	.row > .col--sm-half{
 		width: 1/2 * 100%;
 	}
 
-	.col--sm-third{
+	.row > .col--sm-third{
 		width: 1/3 * 100%;
 	}
 
-	.col--sm-quater{
+	.row > .col--sm-quater{
 		width: 1/4 * 100%;
 	}
 }
 
 @media (min-width: $breakpoint-md){
-	.col--md-half,
-	.col--md-third,
-	.col--md-quater{
+	.row > .col--md-half,
+	.row > .col--md-third,
+	.row > .col--md-quater{
 		float: left;
 		padding-left: $gutter;
 		padding-right: 0;
@@ -134,28 +128,28 @@ $breakpoint-lg: 1024px;
 		padding-right: $gutter / 2
 	}	
 
-	.col--md-full{
+	.row > .col--md-full{
 		width: 100%;
 	}
 
-	.col--md-half{
+	.row > .col--md-half{
 		width: 1/2 * 100%;
 	}
 
-	.col--md-third{
+	.row > .col--md-third{
 		width: 1/3 * 100%;
 	}
 
-	.col--md-quater{
+	.row > .col--md-quater{
 		width: 1/4 * 100%;
 	}
 }
 
 
 @media (min-width: $breakpoint-lg){
-	.col--lg-half,
-	.col--lg-third,
-	.col--lg-quater{
+	.row > .col--lg-half,
+	.row > .col--lg-third,
+	.row > .col--lg-quater{
 		float: left;
 		padding-left: $gutter;
 		padding-right: 0;
@@ -168,19 +162,30 @@ $breakpoint-lg: 1024px;
 		padding-right: $gutter / 2
 	}	
 
-	.col--lg-full{
+	.row > .col--lg-full{
 		width: 100%;
 	}
 
-	.col--lg-half{
+	.row > .col--lg-half{
 		width: 1/2 * 100%;
 	}
 
-	.col--lg-third{
+	.row > .col--lg-third{
 		width: 1/3 * 100%;
 	}
 
-	.col--lg-quater{
+	.row > .col--lg-quater{
 		width: 1/4 * 100%;
 	}
+}
+
+.row--no-gutters > .col{
+	padding-left: 0;	
+	padding-right: 0;
+}
+
+.row > .col--center-me-plz{
+	float: none;
+	padding-left: 0;
+	margin: 0 auto;
 }

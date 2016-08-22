@@ -1,0 +1,144 @@
+/** Grid Vars **/
+/** resets **/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after,
+.container:after,
+.container-fluid:after,
+.row:after {
+  clear: both; }
+
+.container {
+  display: block;
+  width: 100%;
+  margin: 0 auto; }
+
+.container--max-width {
+  max-width: 1170px; }
+
+.row {
+  width: 100%; }
+
+.col {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%; }
+
+.row--no-gutters > .col {
+  padding-left: 0;
+  padding-right: 0; }
+
+.col--xs-half,
+.col--xs-third,
+.col--xs-quater {
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.col--xs-full {
+  width: 100%; }
+
+.col--xs-half {
+  width: 100/2%; }
+
+.col--xs-third {
+  width: 100/3%; }
+
+.col--xs-quater {
+  width: 100/4%; }
+
+@media (min-width: 480px) {
+  .col--sm-half,
+  .col--sm-third,
+  .col--sm-quater {
+    float: left;
+    padding-left: 40px;
+    padding-right: 0; }
+
+  .row--double-padded > .col--sm-half,
+  .row--double-padded > .col--sm-third,
+  .row--double-padded > .col--sm-quater {
+    padding-left: 20px;
+    padding-right: 20px; }
+
+  .col--sm-full {
+    width: 100%; }
+
+  .col--sm-half {
+    width: 50%; }
+
+  .col--sm-third {
+    width: 33.33333%; }
+
+  .col--sm-quater {
+    width: 25%; } }
+@media (min-width: 992px) {
+  .col--md-half,
+  .col--md-third,
+  .col--md-quater {
+    float: left;
+    padding-left: 40px;
+    padding-right: 0; }
+
+  .row--double-padded > .col--md-half,
+  .row--double-padded > .col--md-third,
+  .row--double-padded > .col--md-quater {
+    padding-left: 20px;
+    padding-right: 20px; }
+
+  .col--md-full {
+    width: 100%; }
+
+  .col--md-half {
+    width: 50%; }
+
+  .col--md-third {
+    width: 33.33333%; }
+
+  .col--md-quater {
+    width: 25%; } }
+@media (min-width: 1024px) {
+  .col--lg-half,
+  .col--lg-third,
+  .col--lg-quater {
+    float: left;
+    padding-left: 40px;
+    padding-right: 0; }
+
+  .row--double-padded > .col--lg-half,
+  .row--double-padded > .col--lg-third,
+  .row--double-padded > .col--lg-quater {
+    padding-left: 20px;
+    padding-right: 20px; }
+
+  .col--lg-full {
+    width: 100%; }
+
+  .col--lg-half {
+    width: 50%; }
+
+  .col--lg-third {
+    width: 33.33333%; }
+
+  .col--lg-quater {
+    width: 25%; } }
+
+/*# sourceMappingURL=sassy-grid.css.map */

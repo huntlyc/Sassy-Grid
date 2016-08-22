@@ -1,0 +1,186 @@
+/** Grid Vars **/
+$cols: 12;
+$gutter: 40px;
+$max-width: 1170px;
+
+$breakpoint-sm: 480px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1024px;
+
+/** resets **/
+* {
+	margin: 0;
+	padding: 0;
+  	box-sizing: border-box;  
+}
+*:before,
+*:after {
+  box-sizing: border-box;  
+}
+
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after,
+.container:after,
+.container-fluid:after,
+.row:after {
+  clear: both;
+}
+
+.container{
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container--max-width{
+	max-width: $max-width;
+}
+
+.row{
+	width: 100%;
+}
+
+.col{
+	padding-left: $gutter / 2;
+	padding-right: $gutter / 2;
+	width: 100%;
+}
+
+.row--no-gutters > .col{
+	padding-left: 0;	
+	padding-right: 0;
+}
+
+.col--xs-half,
+.col--xs-third,
+.col--xs-quater{
+	float: left;	
+	padding-left: $gutter / 2;
+	padding-right: $gutter / 2;
+}
+
+.col--xs-full{
+	width: 100%;
+}
+
+.col--xs-half{
+	width: 100/2%;
+}
+
+.col--xs-third{
+	width: 100/3%;
+}
+
+.col--xs-quater{
+	width: 100/4%;
+}
+
+@media (min-width: $breakpoint-sm){
+	.col--sm-half,
+	.col--sm-third,
+	.col--sm-quater{		
+		float: left;
+		padding-left: $gutter;
+		padding-right: 0;
+	}
+
+	.row--double-padded > .col--sm-half,
+	.row--double-padded > .col--sm-third,
+	.row--double-padded > .col--sm-quater{		
+		padding-left: $gutter / 2;
+		padding-right: $gutter / 2
+	}	
+
+	.col--sm-full{
+		width: 100%;
+	}
+
+	.col--sm-half{
+		width: 1/2 * 100%;
+	}
+
+	.col--sm-third{
+		width: 1/3 * 100%;
+	}
+
+	.col--sm-quater{
+		width: 1/4 * 100%;
+	}
+}
+
+@media (min-width: $breakpoint-md){
+	.col--md-half,
+	.col--md-third,
+	.col--md-quater{
+		float: left;
+		padding-left: $gutter;
+		padding-right: 0;
+	}
+
+	.row--double-padded > .col--md-half,
+	.row--double-padded > .col--md-third,
+	.row--double-padded > .col--md-quater{		
+		padding-left: $gutter / 2;
+		padding-right: $gutter / 2
+	}	
+
+	.col--md-full{
+		width: 100%;
+	}
+
+	.col--md-half{
+		width: 1/2 * 100%;
+	}
+
+	.col--md-third{
+		width: 1/3 * 100%;
+	}
+
+	.col--md-quater{
+		width: 1/4 * 100%;
+	}
+}
+
+
+@media (min-width: $breakpoint-lg){
+	.col--lg-half,
+	.col--lg-third,
+	.col--lg-quater{
+		float: left;
+		padding-left: $gutter;
+		padding-right: 0;
+	}
+
+	.row--double-padded > .col--lg-half,
+	.row--double-padded > .col--lg-third,
+	.row--double-padded > .col--lg-quater{		
+		padding-left: $gutter / 2;
+		padding-right: $gutter / 2
+	}	
+
+	.col--lg-full{
+		width: 100%;
+	}
+
+	.col--lg-half{
+		width: 1/2 * 100%;
+	}
+
+	.col--lg-third{
+		width: 1/3 * 100%;
+	}
+
+	.col--lg-quater{
+		width: 1/4 * 100%;
+	}
+}

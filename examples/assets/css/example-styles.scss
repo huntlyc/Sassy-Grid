@@ -1,0 +1,85 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans|Raleway';
+/*font-family: 'Open Sans', sans-serif; font-family: 'Raleway', sans-serif; */
+
+$primary-font: 'Open Sans', sans-serif;
+$header-font: 'Raleway', sans-serif;
+$base-colour: #383838;
+$highlight-color: #ff5252;
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-size: 18px;
+	font-family: $primary-font;
+	line-height: 1.5;
+	color: $base-colour;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+	font-family: $header-font;
+	color: $highlight-color;
+}
+
+h1{
+	font-size: 2rem;
+}
+
+h2{
+	font-size: 1.8rem;
+}
+
+h3{
+	font-size: 1.6rem;
+}
+
+h4{
+	font-size: 1.4rem;
+}
+
+h5{
+	font-size: 1.2rem;
+}
+
+h6{
+	font-size: 1rem;
+}
+
+a{
+	color: $highlight-color;	
+	text-decoration: none;
+}
+
+a:hover,
+a:hover,
+a:hover{
+	color: lighten($highlight-color, 20);
+	text-decoration: none;
+}
+
+
+article h1{
+	font-size: 1.5rem;
+}
+
+del{
+	color: lighten($base-colour, 20);
+}
+
+ins{
+	text-decoration: none;
+}
+
+img.responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

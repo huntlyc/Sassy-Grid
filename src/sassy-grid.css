@@ -53,13 +53,13 @@
   width: 100%; }
 
 .row > .col--xs-half {
-  width: 100/2%; }
+  width: 50%; }
 
 .row > .col--xs-third {
-  width: 100/3%; }
+  width: 33.33333%; }
 
 .row > .col--xs-quater {
-  width: 100/4%; }
+  width: 25%; }
 
 @media (min-width: 480px) {
   .row > .col--sm-half,

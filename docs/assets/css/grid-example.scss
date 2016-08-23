@@ -1,0 +1,81 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans|Raleway';
+/*font-family: 'Open Sans', sans-serif; font-family: 'Raleway', sans-serif; */
+
+$primary-font: 'Open Sans', sans-serif;
+$header-font: 'Raleway', sans-serif;
+$base-colour: #383838;
+$highlight-color: #ff5252;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body { height: 100%; }
+
+body{
+    font-size: 18px;
+    font-family: $primary-font;
+    line-height: 1.5;
+    color: $base-colour;
+}
+a{
+    color: $highlight-color;
+    text-decoration: none;
+    transition: color 0.2s linear;
+
+    &:hover,
+    &:focus,
+    &:active{
+        color: lighten($highlight-color, 20);
+        text-decoration: none;
+    }
+}
+
+
+.btn{
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: $highlight-color;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s linear;
+
+    &:hover,
+    &:active,
+    &:focus{
+        background-color: darken($highlight-color, 20);
+    }
+
+}
+h1{
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    font-weight: normal;
+    font-family: $header-font;
+    color: $highlight-color;
+    font-size: 2rem;
+    text-align: center;
+}
+
+h2{
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    font-family: $header-font;
+    color: lighten($base-colour, 20);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.col .item{
+    background-color: #e6e6e6;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.container .container .col .item{
+    background-color: #f7eeee;
+}

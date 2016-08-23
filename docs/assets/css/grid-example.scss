@@ -1,81 +1,33 @@
-@import 'https://fonts.googleapis.com/css?family=Open+Sans|Raleway';
-/*font-family: 'Open Sans', sans-serif; font-family: 'Raleway', sans-serif; */
+@import 'jockstrap';
 
-$primary-font: 'Open Sans', sans-serif;
-$header-font: 'Raleway', sans-serif;
-$base-colour: #383838;
-$highlight-color: #ff5252;
+h1{    
+    margin-bottom: 0rem;    
+}    
 
-*{
-    margin: 0;
-    padding: 0;
-}
-
-html, body { height: 100%; }
-
-body{
-    font-size: 18px;
-    font-family: $primary-font;
-    line-height: 1.5;
-    color: $base-colour;
-}
-a{
-    color: $highlight-color;
-    text-decoration: none;
-    transition: color 0.2s linear;
-
-    &:hover,
-    &:focus,
-    &:active{
-        color: lighten($highlight-color, 20);
-        text-decoration: none;
-    }
-}
-
-
-.btn{
-    display: inline-block;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    background-color: $highlight-color;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.2s linear;
-
-    &:hover,
-    &:active,
-    &:focus{
-        background-color: darken($highlight-color, 20);
+.grid-examples{
+    .row{
+        background-color: rgba(255, 82, 82, 0.2);        
     }
 
-}
-h1{
-    margin-top: 1rem;
-    margin-bottom: 0rem;
-    font-weight: normal;
-    font-family: $header-font;
-    color: $highlight-color;
-    font-size: 2rem;
-    text-align: center;
-}
+    .col{    
+        border: 1px dashed rgba(255, 82, 82, 0.8);
+        .item{
+            background-color: rgba(255, 82, 82, 0.4);
+            text-align: center;
 
-h2{
-    margin-top: 0rem;
-    margin-bottom: 1rem;
-    font-weight: normal;
-    font-family: $header-font;
-    color: lighten($base-colour, 20);
-    font-size: 1.2rem;
-    text-align: center;
-}
+            span{
+                display: inline-block;
+                padding: 1rem 0;
+            }
+        }
+    }
 
-.col .item{
-    background-color: #e6e6e6;
-    text-align: center;
-    border: 1px solid #ccc;
-}
 
-.container .container .col .item{
-    background-color: #f7eeee;
+
+    .container .container .col{
+        background-color: rgba(255, 82, 82, 0.6);
+        .item{
+            background-color: rgba(255, 82, 82, 0.8);
+        }
+    }
 }

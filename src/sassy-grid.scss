@@ -17,8 +17,6 @@ $breakpoint-lg: 1024px;
   box-sizing: border-box;
 }
 
-.clearfix:before,
-.clearfix:after,
 .container:before,
 .container:after,
 .row:before,
@@ -26,9 +24,8 @@ $breakpoint-lg: 1024px;
   content: " ";
   display: table;
 }
-.clearfix:after,
+
 .container:after,
-.container-fluid:after,
 .row:after {
   clear: both;
 }
@@ -43,14 +40,12 @@ $breakpoint-lg: 1024px;
 	max-width: $max-width;
 }
 
+.col,
 .row{
 	width: 100%;
 }
 
-.col{
-	width: 100%;
-}
-
+	
 .row > .col--xs-half,
 .row > .col--xs-third,
 .row > .col--xs-quater{

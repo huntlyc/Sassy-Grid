@@ -1,0 +1,50 @@
+@import 'jockstrap';
+
+section.container--instagram{	
+	padding-bottom: 0;
+	h1{
+		small{
+			font-size: 0.5em;
+			color: lighten($base-colour, 40);
+		}
+	}
+	.pic-feed{
+		background-color: #ffeded;
+
+		a{
+			img{
+				-webkit-filter: grayscale(1) opacity(0.4);
+  				filter: grayscale(1) opacity(0.4);
+  				transition: filter, -webkit-filter 0.2s linear;
+			}
+
+			&:hover,
+			&:focus,
+			&:active{
+				img{
+					-webkit-filter: grayscale(0) opacity(1);
+  					filter: grayscale(0) opacity(1);
+  				}
+			}
+		}
+	}
+}
+
+article{
+	text-align: center;
+
+	i.fa{
+		padding-top: 2rem;
+		font-size: 10rem;
+	}
+	h1{
+		font-size: 1.5rem;
+	}
+
+	p{
+		strong{
+			font-weight: 600;
+			color: lighten($base-colour, 30);
+		}
+	}
+}

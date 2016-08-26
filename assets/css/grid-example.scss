@@ -1,0 +1,33 @@
+@import 'jockstrap';
+
+h1{    
+    margin-bottom: 0rem;    
+}    
+
+.grid-examples{
+    .row{
+        background-color: rgba(255, 82, 82, 0.2);        
+    }
+
+    .col{    
+        border: 1px dashed rgba(255, 82, 82, 0.8);
+        .item{
+            background-color: rgba(255, 82, 82, 0.4);
+            text-align: center;
+
+            span{
+                display: inline-block;
+                padding: 1rem 0;
+            }
+        }
+    }
+
+
+
+    .container .container .col{
+        background-color: rgba(255, 82, 82, 0.6);
+        .item{
+            background-color: rgba(255, 82, 82, 0.8);
+        }
+    }
+}

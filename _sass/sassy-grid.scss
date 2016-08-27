@@ -1,0 +1,234 @@
+/** Grid Vars **/
+$gutter: 40px;
+$max-width: 1170px;
+
+$breakpoint-sm: 480px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1024px;
+
+/** resets **/
+* {
+	margin: 0;
+	padding: 0;
+  	box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.container:before,
+.container:after,
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+
+.container:after,
+.row:after {
+  clear: both;
+}
+
+.container{
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container--max-width{
+	max-width: $max-width;
+}
+
+.col,
+.row{
+	width: 100%;
+}
+
+
+.row > .col--xs-half,
+.row > .col--xs-third,
+.row > .col--xs-quarter{
+	float: left;
+	padding-left: 0;
+}
+
+.row > .col--xs-full{
+	width: 100%;
+}
+
+.row > .col--xs-half{
+	width: 1/2 * 100%;
+}
+
+.row > .col--xs-third{
+	width: 1/3 * 100%;
+}
+
+.row > .col--xs-quarter{
+	width: 1/4 * 100%;
+}
+
+@media (max-width: $breakpoint-sm){
+    .row > .col,
+    .row > .col--xs-half,
+    .row > .col--xs-third,
+    .row > .col--xs-quarter{
+        float: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (min-width: $breakpoint-sm){
+	.row > .col--sm-half,
+	.row > .col--sm-third,
+	.row > .col--sm-quarter{
+		float: left;
+		padding-left: $gutter;
+		padding-right: 0;
+	}
+
+    .row > .col--sm-half:first-child,
+    .row > .col--sm-third:first-child,
+    .row > .col--sm-quarter:first-child{
+        padding-left: 0
+    }
+
+    .row--double-padded > .col--sm-full,
+	.row--double-padded > .col--sm-half,
+	.row--double-padded > .col--sm-third,
+	.row--double-padded > .col--sm-quarter{
+		padding-left: $gutter / 2;
+		padding-right: $gutter / 2
+	}
+
+    .row--double-padded > .col--sm-full:first-child,
+    .row--double-padded > .col--sm-half:first-child,
+    .row--double-padded > .col--sm-third:first-child,
+    .row--double-padded > .col--sm-quarter:first-child{
+        padding-left: $gutter / 2;
+    }
+
+	.row > .col--sm-full{
+		width: 100%;
+	}
+
+	.row > .col--sm-half{
+		width: 1/2 * 100%;
+	}
+
+	.row > .col--sm-third{
+		width: 1/3 * 100%;
+	}
+
+	.row > .col--sm-quarter{
+		width: 1/4 * 100%;
+	}
+}
+
+@media (min-width: $breakpoint-md){
+	.row > .col--md-half,
+	.row > .col--md-third,
+	.row > .col--md-quarter{
+		float: left;
+		padding-left: $gutter;
+		padding-right: 0;
+	}
+
+    .row > .col--md-half:first-child,
+    .row > .col--md-third:first-child,
+    .row > .col--md-quarter:first-child{
+        padding-left: 0
+    }
+
+    .row--double-padded > .col--md-full,
+	.row--double-padded > .col--md-half,
+	.row--double-padded > .col--md-third,
+	.row--double-padded > .col--md-quarter{
+		padding-left: $gutter / 2;
+		padding-right: $gutter / 2
+	}
+
+    .row--double-padded > .col--md-full:first-child,
+    .row--double-padded > .col--md-half:first-child,
+    .row--double-padded > .col--md-third:first-child,
+    .row--double-padded > .col--md-quarter:first-child{
+        padding-left: $gutter / 2;
+    }
+
+	.row > .col--md-full{
+		width: 100%;
+	}
+
+	.row > .col--md-half{
+		width: 1/2 * 100%;
+	}
+
+	.row > .col--md-third{
+		width: 1/3 * 100%;
+	}
+
+	.row > .col--md-quarter{
+		width: 1/4 * 100%;
+	}
+}
+
+
+@media (min-width: $breakpoint-lg){
+	.row > .col--lg-half,
+	.row > .col--lg-third,
+	.row > .col--lg-quarter{
+		float: left;
+		padding-left: $gutter;
+		padding-right: 0;
+	}
+
+    .row > .col--lg-half:first-child,
+    .row > .col--lg-third:first-child,
+    .row > .col--lg-quarter:first-child{
+        padding-left: 0
+    }
+
+    .row--double-padded > .col--lg-full,
+	.row--double-padded > .col--lg-half,
+	.row--double-padded > .col--lg-third,
+	.row--double-padded > .col--lg-quarter{
+		padding-left: $gutter / 2;
+		padding-right: $gutter / 2
+	}
+
+    .row--double-padded > .col--lg-full:first-child,
+    .row--double-padded > .col--lg-half:first-child,
+    .row--double-padded > .col--lg-third:first-child,
+    .row--double-padded > .col--lg-quarter:first-child{
+        padding-left: $gutter / 2;
+    }
+
+	.row > .col--lg-full{
+		width: 100%;
+	}
+
+	.row > .col--lg-half{
+		width: 1/2 * 100%;
+	}
+
+	.row > .col--lg-third{
+		width: 1/3 * 100%;
+	}
+
+	.row > .col--lg-quarter{
+		width: 1/4 * 100%;
+	}
+}
+
+.row--no-gutters > .col{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.row > .col--center-me-plz{
+	float: none;
+	padding-left: 0;
+	margin: 0 auto;
+}

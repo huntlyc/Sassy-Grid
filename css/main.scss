@@ -1,0 +1,91 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+@import 'sassy-grid';
+@import 'jockstrap';
+
+section.container--instagram{
+	padding-bottom: 0;
+	h1{
+		small{
+			font-size: 0.5em;
+			color: lighten($base-colour, 40);
+		}
+	}
+	.pic-feed{
+		background-color: #ffeded;
+
+		a{
+			img{
+				-webkit-filter: grayscale(1) opacity(0.4);
+  				filter: grayscale(1) opacity(0.4);
+  				transition: filter, -webkit-filter 0.2s linear;
+			}
+
+			&:hover,
+			&:focus,
+			&:active{
+				img{
+					-webkit-filter: grayscale(0) opacity(1);
+  					filter: grayscale(0) opacity(1);
+  				}
+			}
+		}
+	}
+}
+
+article{
+	text-align: center;
+
+	i.fa{
+		padding-top: 2rem;
+		font-size: 10rem;
+	}
+	h1{
+		font-size: 1.5rem;
+	}
+
+	p{
+		strong{
+			font-weight: 600;
+			color: lighten($base-colour, 30);
+		}
+	}
+}
+
+//Grid examples css
+.grid-examples{
+    h1{
+        margin-bottom: 0rem;
+    }
+
+    .row{
+        background-color: rgba(255, 82, 82, 0.2);
+    }
+
+    .col{
+        border: 1px dashed rgba(255, 82, 82, 0.8);
+        .item{
+            background-color: rgba(255, 82, 82, 0.4);
+            text-align: center;
+
+            span{
+                display: inline-block;
+                padding: 1rem 0;
+            }
+        }
+    }
+	.col--no-border{
+		border: none;
+	}
+
+
+
+    .container .container .col{
+        background-color: rgba(255, 82, 82, 0.6);
+        .item{
+            background-color: rgba(255, 82, 82, 0.8);
+        }
+    }
+}

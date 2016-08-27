@@ -214,7 +214,7 @@ figure pre{
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 }
-figure.highlight code, figure.highlight pre{color:#fdce93;background-color:#3f3f3f}
+figure.highlight code, figure.highlight pre{color:#fdce93;background-color:#3f3f3f; white-space: pre-wrap;}
 figure.highlight .hll{background-color:#222}
 figure.highlight .c{color:#7f9f7f}
 figure.highlight .err{color:#e37170;background-color:#3d3535}

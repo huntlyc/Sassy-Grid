@@ -45,10 +45,10 @@ $breakpoint-lg: 1024px;
 	width: 100%;
 }
 
-	
+
 .row > .col--xs-half,
 .row > .col--xs-third,
-.row > .col--xs-quater{
+.row > .col--xs-quarter{
 	float: left;
 	padding-left: 0;
 }
@@ -65,7 +65,7 @@ $breakpoint-lg: 1024px;
 	width: 1/3 * 100%;
 }
 
-.row > .col--xs-quater{
+.row > .col--xs-quarter{
 	width: 1/4 * 100%;
 }
 
@@ -73,7 +73,7 @@ $breakpoint-lg: 1024px;
     .row > .col,
     .row > .col--xs-half,
     .row > .col--xs-third,
-    .row > .col--xs-quater{
+    .row > .col--xs-quarter{
         float: none;
         padding-left: 0;
         padding-right: 0;
@@ -83,7 +83,7 @@ $breakpoint-lg: 1024px;
 @media (min-width: $breakpoint-sm){
 	.row > .col--sm-half,
 	.row > .col--sm-third,
-	.row > .col--sm-quater{
+	.row > .col--sm-quarter{
 		float: left;
 		padding-left: $gutter;
 		padding-right: 0;
@@ -91,14 +91,14 @@ $breakpoint-lg: 1024px;
 
     .row > .col--sm-half:first-child,
     .row > .col--sm-third:first-child,
-    .row > .col--sm-quater:first-child{
+    .row > .col--sm-quarter:first-child{
         padding-left: 0
     }
 
     .row--double-padded > .col--sm-full,
 	.row--double-padded > .col--sm-half,
 	.row--double-padded > .col--sm-third,
-	.row--double-padded > .col--sm-quater{
+	.row--double-padded > .col--sm-quarter{
 		padding-left: $gutter / 2;
 		padding-right: $gutter / 2
 	}
@@ -106,7 +106,7 @@ $breakpoint-lg: 1024px;
     .row--double-padded > .col--sm-full:first-child,
     .row--double-padded > .col--sm-half:first-child,
     .row--double-padded > .col--sm-third:first-child,
-    .row--double-padded > .col--sm-quater:first-child{
+    .row--double-padded > .col--sm-quarter:first-child{
         padding-left: $gutter / 2;
     }
 
@@ -122,7 +122,7 @@ $breakpoint-lg: 1024px;
 		width: 1/3 * 100%;
 	}
 
-	.row > .col--sm-quater{
+	.row > .col--sm-quarter{
 		width: 1/4 * 100%;
 	}
 }
@@ -130,7 +130,7 @@ $breakpoint-lg: 1024px;
 @media (min-width: $breakpoint-md){
 	.row > .col--md-half,
 	.row > .col--md-third,
-	.row > .col--md-quater{
+	.row > .col--md-quarter{
 		float: left;
 		padding-left: $gutter;
 		padding-right: 0;
@@ -138,14 +138,14 @@ $breakpoint-lg: 1024px;
 
     .row > .col--md-half:first-child,
     .row > .col--md-third:first-child,
-    .row > .col--md-quater:first-child{
+    .row > .col--md-quarter:first-child{
         padding-left: 0
     }
 
     .row--double-padded > .col--md-full,
 	.row--double-padded > .col--md-half,
 	.row--double-padded > .col--md-third,
-	.row--double-padded > .col--md-quater{
+	.row--double-padded > .col--md-quarter{
 		padding-left: $gutter / 2;
 		padding-right: $gutter / 2
 	}
@@ -153,7 +153,7 @@ $breakpoint-lg: 1024px;
     .row--double-padded > .col--md-full:first-child,
     .row--double-padded > .col--md-half:first-child,
     .row--double-padded > .col--md-third:first-child,
-    .row--double-padded > .col--md-quater:first-child{
+    .row--double-padded > .col--md-quarter:first-child{
         padding-left: $gutter / 2;
     }
 
@@ -169,7 +169,7 @@ $breakpoint-lg: 1024px;
 		width: 1/3 * 100%;
 	}
 
-	.row > .col--md-quater{
+	.row > .col--md-quarter{
 		width: 1/4 * 100%;
 	}
 }
@@ -178,7 +178,7 @@ $breakpoint-lg: 1024px;
 @media (min-width: $breakpoint-lg){
 	.row > .col--lg-half,
 	.row > .col--lg-third,
-	.row > .col--lg-quater{
+	.row > .col--lg-quarter{
 		float: left;
 		padding-left: $gutter;
 		padding-right: 0;
@@ -186,14 +186,14 @@ $breakpoint-lg: 1024px;
 
     .row > .col--lg-half:first-child,
     .row > .col--lg-third:first-child,
-    .row > .col--lg-quater:first-child{
+    .row > .col--lg-quarter:first-child{
         padding-left: 0
     }
 
     .row--double-padded > .col--lg-full,
 	.row--double-padded > .col--lg-half,
 	.row--double-padded > .col--lg-third,
-	.row--double-padded > .col--lg-quater{
+	.row--double-padded > .col--lg-quarter{
 		padding-left: $gutter / 2;
 		padding-right: $gutter / 2
 	}
@@ -201,7 +201,7 @@ $breakpoint-lg: 1024px;
     .row--double-padded > .col--lg-full:first-child,
     .row--double-padded > .col--lg-half:first-child,
     .row--double-padded > .col--lg-third:first-child,
-    .row--double-padded > .col--lg-quater:first-child{
+    .row--double-padded > .col--lg-quarter:first-child{
         padding-left: $gutter / 2;
     }
 
@@ -217,7 +217,7 @@ $breakpoint-lg: 1024px;
 		width: 1/3 * 100%;
 	}
 
-	.row > .col--lg-quater{
+	.row > .col--lg-quarter{
 		width: 1/4 * 100%;
 	}
 }

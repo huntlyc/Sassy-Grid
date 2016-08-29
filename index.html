@@ -7,7 +7,7 @@ layout: default
 			<h1>This grid is cool because of things...</h1>
 		</div>
 	</div>
-	<div class="row row--double-padded">
+	<div class="row row--double-padded grid-points">
 		<div class="col col--sm-full col--md-third">
 			<article>
 				<i class="fa fa-bolt" aria-hidden="true"></i>
@@ -150,7 +150,17 @@ layout: default
 		</div>
 	</div>
 </section>
-<section class="container container--instagram">
+<section>
+	<div class="container container--max-width">
+		<div class="row">
+			<div class="col col--no-border col--sm-full">
+				<h2>Want to see more?&nbsp;&nbsp;<a href="{{ "/docs/" | prepend: site.baseurl }}" class="btn"><i class="fa fa-book"></i> View Docs</a></h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- <section class="container container--instagram">
 	<div class="row">
 		<div class="col col--xs-full">
 			<h1>As seen on... <small>(ahem... <em>just here...</em> for now)!</small></h1>
@@ -160,4 +170,4 @@ layout: default
 		<div class="col col--lg-half col--md-half col--sm-half col--xs-full"><a href="grid.html"><img src="{{ "/img/ex1.jpg" | prepend: site.baseurl }}" alt="Example 1" class="responsive"></a></div>
 		<div class="col col--lg-half col--md-half col--sm-half col--xs-full"><a href="grid.html"><img src="{{ "/img/ex2.jpg" | prepend: site.baseurl }}" alt="Example 2" class="responsive"></a></div>
 	</div>
-</section>
+</section> -->

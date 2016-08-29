@@ -35,7 +35,7 @@ section.container--instagram{
 	}
 }
 
-article{
+.grid-points article{
 	text-align: center;
 
 	i.fa{
@@ -54,6 +54,27 @@ article{
 	}
 }
 
+article{
+	text-align: center;
+
+	table{
+		border-collapse: collapse;
+		margin: 0 auto 1.5rem auto;
+		th,td{
+			padding: 0.5rem 1rem;
+		}
+
+		th{
+			color: $highlight-color;
+			border-bottom: 1px solid $highlight-color;
+		}
+
+		td{
+			border-bottom: 1px solid transparentize($highlight-color, 0.5);
+		}
+	}
+}
+
 //Grid examples css
 .grid-examples{
     h1{
@@ -61,13 +82,13 @@ article{
     }
 
     .row{
-        background-color: rgba(255, 82, 82, 0.2);
+        background-color: transparentize($highlight-color, 0.8);
     }
 
     .col{
-        border: 1px dashed rgba(255, 82, 82, 0.8);
+        border: 1px dashed transparentize($highlight-color, 0.2);
         .item{
-            background-color: rgba(255, 82, 82, 0.4);
+            background-color: transparentize($highlight-color, 0.6);
             text-align: center;
 
             span{
@@ -83,9 +104,9 @@ article{
 
 
     .container .container .col{
-        background-color: rgba(255, 82, 82, 0.6);
+        background-color: transparentize($highlight-color, 0.4);
         .item{
-            background-color: rgba(255, 82, 82, 0.8);
+            background-color: transparentize($highlight-color, 0.2);
         }
     }
 }

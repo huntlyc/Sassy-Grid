@@ -1,6 +1,88 @@
 ---
 layout: default
 ---
+<article>
+    <section class="a-wee-story">
+        <div class="container container--max-width">
+            <div class="row">
+                <div class="col--sm-full">
+                    <h1>About this wee project...</h1>
+                    <p>
+                        This little grid system was born out of conflict between those that want double padding on their grid using <a target="_blank" href="https://getboostrap.com">a very well known framework</a> and those that wanted a little more customization.
+                    </p>
+                    <p>
+                        The customization was important: Why constrain the grid to <strong>$X</strong> pixels wide? Why can we not choose double padded or single padded columns for more layout options?  Why is the milk in the fridge off, <em>again</em>?
+                    </p>
+                    <p>
+                        I took this on as my own wee one nighter project to: <br/> <br/>
+                        - Delve into the world of the gird instead of just accepting the status quo <br/>
+                        - Learn a bit more about <a href="http://sass-lang.com/">sass</a> and how to incorporate it into my workflow <br/>
+                        - To avoid wasting another night spent playing <a target="_blank" href="http://stardewvalley.net/">Stardew Valley</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="grid-intro">
+        <div class="container container--max-width">
+            <div class="row">
+                <div class="col--sm-full">
+                    <h1>The Sassy Grid</h1>
+                    <p>
+                        By default this grid is <strong>a fluid full width</strong> grid.  Once it hits <strong>below 480px (large mobile)</strong>, it stacks all columns as full width.  <strong>There is no mobile columns by default - you'll have to add your own as needed</strong>.
+                    </p>
+                    <h2>Default Breakpoints</h2>
+                    <p>
+                        These are the default breakpoints.  If you want full fluid from mobile up, just use the <strong>col--sm-<em>size</em></strong> class.  If you're comfortable with sass, you can open up the <strong>sassy-grid.scss</strong> file and alter the variables at the top to suit your needs, heck, <strong>@import</strong> and <strong>@extend</strong> if that's what you're into...
+                    </p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Col class
+                                </th>
+                                <th>
+                                    Breakpoint
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>xs (mobile)</td>
+                                <td> < 480px</td>
+                            </tr>
+                            <tr>
+                                <td>sm (tablet)</td>
+                                <td>480px - 991px</td>
+                            </tr>
+                            <tr>
+                                <td>md (large tab, small laptop)</td>
+                                <td>992px - 1023px</td>
+                            </tr>
+                            <tr>
+                                <td>lg (desktop and beyond)</td>
+                                <td> > 1024px</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="a-wee-story">
+        <div class="container container--max-width">
+            <div class="row">
+                <div class="col--sm-full">
+                    <h1>Now, for the examples...</h1>
+                    <p>
+                        You'll need to inspect the soucre to see the classes used, note the <em>div.item>span</em> in each <em>.col</em> is only here for presentational purposes and is not required.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
 <section class="grid-examples">
     <h1>Full Grid</h1>
     <h2>Default: 40px padding left only - skiping first col of row</h2>
@@ -48,9 +130,9 @@ layout: default
         </div>
     </div>
 
-    <h1>Double Padded Grid</h1>
-    <h2>Default: 20px each side</h2>
-    <div class="container">
+    <h1>Max Width Double Padded Grid</h1>
+    <h2>Default: 1170px wide with 20px gutter each side</h2>
+    <div class="container container--max-width">
         <div class="row row--double-padded">
             <div class="col col--sm-full"><div class="item"><span>full</span></div></div>
         </div>

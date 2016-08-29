@@ -107,7 +107,7 @@ a{
 	&:active,
 	&:focus{
 		color: #fff;
-		background-color: darken($highlight-color, 20);
+		background-color: lighten($highlight-color, 10);
 	}
 
 }

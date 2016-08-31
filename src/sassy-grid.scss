@@ -1,4 +1,4 @@
-/** Grid Vars **/
+// Grid Vars 
 $gutter: 40px;
 $max-width: 1170px;
 
@@ -6,12 +6,13 @@ $breakpoint-sm: 480px;
 $breakpoint-md: 992px;
 $breakpoint-lg: 1024px;
 
-/** resets **/
+// resets 
 * {
 	margin: 0;
 	padding: 0;
   	box-sizing: border-box;
 }
+
 *:before,
 *:after {
   box-sizing: border-box;

@@ -1,26 +1,34 @@
 // Grid Vars
-$gutter: 40px;
-$max-width: 1170px;
-$minMaxWidth: min-width;
+$gutter: 40px !default;
+$max-width: 1170px !default;
 
 $breakpoints: (
-    xs: 480,
-    sm: 480,
-    md: 768,
-    lg: 980,
-    xl: 1024,
-);
+    sm: 480px,
+    md: 768px,
+    lg: 980px,
+    xl: 1024px,
+) !default;
+
+//Internal
+$minMaxWidth: min-width;
+
 
 
 // resets
-* {
+.container,
+.row,
+.col {
 	margin: 0;
 	padding: 0;
   	box-sizing: border-box;
 }
 
-*:before,
-*:after {
+.container:before,
+.container:after,
+.row:before,
+.row:after,
+.col:before,
+.col:after {
   box-sizing: border-box;
 }
 
@@ -49,48 +57,141 @@ $breakpoints: (
 
 .col,
 .row{
+    display: block;
 	width: 100%;
 }
 
+.col{
+    float: left;
+    padding-right: 40px
+}
+
+.row{
+    padding: 0 0 0 40px;
+}
+
+.row.row--no-gutters{
+    padding: 0;
+}
+
+.row.row--no-gutters .col{
+    padding-right: 0
+}
+
+
+.row > .col--xs-full,
+.row > .col--xs-half,
+.row > .col--xs-third,
+.row > .col--xs-quarter,
+.row > .col--xs-fifth,
+.row > .col--xs-sixth,
+.row > .col--xs-seventh,
+.row > .col--xs-eighth{
+    padding-right: $gutter;
+    padding-left: 0;
+}
+
+//If double padded, padd left and right by half gutter val
+.row--double-padded > .col--xs-full,
+.row--double-padded > .col--xs-half,
+.row--double-padded > .col--xs-third,
+.row--double-padded > .col--xs-quarter,
+.row--double-padded > .col--xs-fifth,
+.row--double-padded > .col--xs-sixth,
+.row--double-padded > .col--xs-seventh,
+.row--double-padded > .col--xs-eighth{
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
+}
+
+//If double padded, padd left and right by half gutter val
+.row--no-gutters > .col--xs-full,
+.row--no-gutters > .col--xs-half,
+.row--no-gutters > .col--xs-third,
+.row--no-gutters > .col--xs-quarter,
+.row--no-gutters > .col--xs-fifth,
+.row--no-gutters > .col--xs-sixth,
+.row--no-gutters > .col--xs-seventh,
+.row--no-gutters > .col--xs-eighth{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+//From here - pretty straight forward
+.row > .col--xs-full{
+    width: 100%;
+}
+
+.row > .col--xs-half{
+    width: 1/2 * 100%;
+}
+
+.row > .col--xs-third{
+    width: 1/3 * 100%;
+}
+
+.row > .col--xs-quarter{
+    width: 1/4 * 100%;
+}
+
+.row > .col--xs-fifth{
+    width: 1/5 * 100%;
+}
+
+.row > .col--xs-sixth{
+    width: 1/6 * 100%;
+}
+
+.row > .col--xs-seventh{
+    width: 1/7 * 100%;
+}
+
+.row > .col--xs-eighth{
+    width: 1/8 * 100%;
+}
 
 @each $screensize, $cuttoff in $breakpoints{
-
-    @if $screensize == "xs" {
-        $minMaxWidth: 'max-width';
-    } @else  {
-        $minMaxWidth: 'min-width';
-    }
-
-    @media ($minMaxWidth: $cuttoff){
+    @media (min-width: $cuttoff){
+        //By default padd all cols to the left only
+        .row > .col--#{$screensize}-full,
     	.row > .col--#{$screensize}-half,
     	.row > .col--#{$screensize}-third,
-    	.row > .col--#{$screensize}-quarter{
-    		float: left;
-    		padding-left: $gutter;
-    		padding-right: 0;
+    	.row > .col--#{$screensize}-quarter,
+        .row > .col--#{$screensize}-fifth,
+        .row > .col--#{$screensize}-sixth,
+        .row > .col--#{$screensize}-seventh,
+        .row > .col--#{$screensize}-eighth{
+    		padding-right: $gutter;
+    		padding-left: 0;
     	}
 
-        .row > .col--#{$screensize}-half:first-child,
-        .row > .col--#{$screensize}-third:first-child,
-        .row > .col--#{$screensize}-quarter:first-child{
-            padding-left: 0
-        }
-
+        //If double padded, padd left and right by half gutter val
         .row--double-padded > .col--#{$screensize}-full,
     	.row--double-padded > .col--#{$screensize}-half,
     	.row--double-padded > .col--#{$screensize}-third,
-    	.row--double-padded > .col--#{$screensize}-quarter{
+    	.row--double-padded > .col--#{$screensize}-quarter,
+        .row--double-padded > .col--#{$screensize}-fifth,
+        .row--double-padded > .col--#{$screensize}-sixth,
+        .row--double-padded > .col--#{$screensize}-seventh,
+        .row--double-padded > .col--#{$screensize}-eighth{
     		padding-left: $gutter / 2;
-    		padding-right: $gutter / 2
+    		padding-right: $gutter / 2;
     	}
 
-        .row--double-padded > .col--#{$screensize}-full:first-child,
-        .row--double-padded > .col--#{$screensize}-half:first-child,
-        .row--double-padded > .col--#{$screensize}-third:first-child,
-        .row--double-padded > .col--#{$screensize}-quarter:first-child{
-            padding-left: $gutter / 2;
+        //If double padded, padd left and right by half gutter val
+        .row--no-gutters > .col--#{$screensize}-full,
+        .row--no-gutters > .col--#{$screensize}-half,
+        .row--no-gutters > .col--#{$screensize}-third,
+        .row--no-gutters > .col--#{$screensize}-quarter,
+        .row--no-gutters > .col--#{$screensize}-fifth,
+        .row--no-gutters > .col--#{$screensize}-sixth,
+        .row--no-gutters > .col--#{$screensize}-seventh,
+        .row--no-gutters > .col--#{$screensize}-eighth{
+            padding-left: 0;
+            padding-right: 0;
         }
 
+        //From here - pretty straight forward
     	.row > .col--#{$screensize}-full{
     		width: 100%;
     	}
@@ -106,5 +207,37 @@ $breakpoints: (
     	.row > .col--#{$screensize}-quarter{
     		width: 1/4 * 100%;
     	}
+
+        .row > .col--#{$screensize}-fifth{
+            width: 1/5 * 100%;
+        }
+
+        .row > .col--#{$screensize}-sixth{
+            width: 1/6 * 100%;
+        }
+
+        .row > .col--#{$screensize}-seventh{
+            width: 1/7 * 100%;
+        }
+
+        .row > .col--#{$screensize}-eighth{
+            width: 1/8 * 100%;
+        }
+
+        .hiden-#{$screensize}{
+            display: none;
+        }
+
+        .visible-xs,
+        .visible-sm,
+        .visible-md,
+        .visible-lg,
+        .visible-xl{
+            display: none !important;
+        }
+
+        .visible-#{$screensize}{
+            display: block !important;
+        }
     }
 }

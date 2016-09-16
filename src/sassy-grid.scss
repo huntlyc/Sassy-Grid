@@ -79,148 +79,148 @@ $minMaxWidth: min-width;
 }
 
 
-.row > .col--xs-full,
-.row > .col--xs-half,
-.row > .col--xs-third,
-.row > .col--xs-quarter,
-.row > .col--xs-fifth,
-.row > .col--xs-sixth,
-.row > .col--xs-seventh,
-.row > .col--xs-eighth{
+.row > .col--xs-1-1,
+.row > .col--xs-1-2,
+.row > .col--xs-1-3,
+.row > .col--xs-1-4,
+.row > .col--xs-1-5,
+.row > .col--xs-1-6,
+.row > .col--xs-1-7,
+.row > .col--xs-1-8{
     padding-right: $gutter;
     padding-left: 0;
 }
 
 //If double padded, padd left and right by half gutter val
-.row--double-padded > .col--xs-full,
-.row--double-padded > .col--xs-half,
-.row--double-padded > .col--xs-third,
-.row--double-padded > .col--xs-quarter,
-.row--double-padded > .col--xs-fifth,
-.row--double-padded > .col--xs-sixth,
-.row--double-padded > .col--xs-seventh,
-.row--double-padded > .col--xs-eighth{
+.row--double-padded > .col--xs-1-1,
+.row--double-padded > .col--xs-1-2,
+.row--double-padded > .col--xs-1-3,
+.row--double-padded > .col--xs-1-4,
+.row--double-padded > .col--xs-1-5,
+.row--double-padded > .col--xs-1-6,
+.row--double-padded > .col--xs-1-7,
+.row--double-padded > .col--xs-1-8{
     padding-left: $gutter / 2;
     padding-right: $gutter / 2;
 }
 
 //If double padded, padd left and right by half gutter val
-.row--no-gutters > .col--xs-full,
-.row--no-gutters > .col--xs-half,
-.row--no-gutters > .col--xs-third,
-.row--no-gutters > .col--xs-quarter,
-.row--no-gutters > .col--xs-fifth,
-.row--no-gutters > .col--xs-sixth,
-.row--no-gutters > .col--xs-seventh,
-.row--no-gutters > .col--xs-eighth{
+.row--no-gutters > .col--xs-1-1,
+.row--no-gutters > .col--xs-1-2,
+.row--no-gutters > .col--xs-1-3,
+.row--no-gutters > .col--xs-1-4,
+.row--no-gutters > .col--xs-1-5,
+.row--no-gutters > .col--xs-1-6,
+.row--no-gutters > .col--xs-1-7,
+.row--no-gutters > .col--xs-1-8{
     padding-left: 0;
     padding-right: 0;
 }
 
 //From here - pretty straight forward
-.row > .col--xs-full{
+.row > .col--xs-1-1{
     width: 100%;
 }
 
-.row > .col--xs-half{
+.row > .col--xs-1-2{
     width: 1/2 * 100%;
 }
 
-.row > .col--xs-third{
+.row > .col--xs-1-3{
     width: 1/3 * 100%;
 }
 
-.row > .col--xs-quarter{
+.row > .col--xs-1-4{
     width: 1/4 * 100%;
 }
 
-.row > .col--xs-fifth{
+.row > .col--xs-1-5{
     width: 1/5 * 100%;
 }
 
-.row > .col--xs-sixth{
+.row > .col--xs-1-6{
     width: 1/6 * 100%;
 }
 
-.row > .col--xs-seventh{
+.row > .col--xs-1-7{
     width: 1/7 * 100%;
 }
 
-.row > .col--xs-eighth{
+.row > .col--xs-1-8{
     width: 1/8 * 100%;
 }
 
 @each $screensize, $cuttoff in $breakpoints{
     @media (min-width: $cuttoff){
         //By default padd all cols to the left only
-        .row > .col--#{$screensize}-full,
-    	.row > .col--#{$screensize}-half,
-    	.row > .col--#{$screensize}-third,
-    	.row > .col--#{$screensize}-quarter,
-        .row > .col--#{$screensize}-fifth,
-        .row > .col--#{$screensize}-sixth,
-        .row > .col--#{$screensize}-seventh,
-        .row > .col--#{$screensize}-eighth{
+        .row > .col--#{$screensize}-1-1,
+    	.row > .col--#{$screensize}-1-2,
+    	.row > .col--#{$screensize}-1-3,
+    	.row > .col--#{$screensize}-1-4,
+        .row > .col--#{$screensize}-1-5,
+        .row > .col--#{$screensize}-1-6,
+        .row > .col--#{$screensize}-1-7,
+        .row > .col--#{$screensize}-1-8{
     		padding-right: $gutter;
     		padding-left: 0;
     	}
 
         //If double padded, padd left and right by half gutter val
-        .row--double-padded > .col--#{$screensize}-full,
-    	.row--double-padded > .col--#{$screensize}-half,
-    	.row--double-padded > .col--#{$screensize}-third,
-    	.row--double-padded > .col--#{$screensize}-quarter,
-        .row--double-padded > .col--#{$screensize}-fifth,
-        .row--double-padded > .col--#{$screensize}-sixth,
-        .row--double-padded > .col--#{$screensize}-seventh,
-        .row--double-padded > .col--#{$screensize}-eighth{
+        .row--double-padded > .col--#{$screensize}-1-1,
+    	.row--double-padded > .col--#{$screensize}-1-2,
+    	.row--double-padded > .col--#{$screensize}-1-3,
+    	.row--double-padded > .col--#{$screensize}-1-4,
+        .row--double-padded > .col--#{$screensize}-1-5,
+        .row--double-padded > .col--#{$screensize}-1-6,
+        .row--double-padded > .col--#{$screensize}-1-7,
+        .row--double-padded > .col--#{$screensize}-1-8{
     		padding-left: $gutter / 2;
     		padding-right: $gutter / 2;
     	}
 
         //If double padded, padd left and right by half gutter val
-        .row--no-gutters > .col--#{$screensize}-full,
-        .row--no-gutters > .col--#{$screensize}-half,
-        .row--no-gutters > .col--#{$screensize}-third,
-        .row--no-gutters > .col--#{$screensize}-quarter,
-        .row--no-gutters > .col--#{$screensize}-fifth,
-        .row--no-gutters > .col--#{$screensize}-sixth,
-        .row--no-gutters > .col--#{$screensize}-seventh,
-        .row--no-gutters > .col--#{$screensize}-eighth{
+        .row--no-gutters > .col--#{$screensize}-1-1,
+        .row--no-gutters > .col--#{$screensize}-1-2,
+        .row--no-gutters > .col--#{$screensize}-1-3,
+        .row--no-gutters > .col--#{$screensize}-1-4,
+        .row--no-gutters > .col--#{$screensize}-1-5,
+        .row--no-gutters > .col--#{$screensize}-1-6,
+        .row--no-gutters > .col--#{$screensize}-1-7,
+        .row--no-gutters > .col--#{$screensize}-1-8{
             padding-left: 0;
             padding-right: 0;
         }
 
         //From here - pretty straight forward
-    	.row > .col--#{$screensize}-full{
+    	.row > .col--#{$screensize}-1-1{
     		width: 100%;
     	}
 
-    	.row > .col--#{$screensize}-half{
+    	.row > .col--#{$screensize}-1-2{
     		width: 1/2 * 100%;
     	}
 
-    	.row > .col--#{$screensize}-third{
+    	.row > .col--#{$screensize}-1-3{
     		width: 1/3 * 100%;
     	}
 
-    	.row > .col--#{$screensize}-quarter{
+    	.row > .col--#{$screensize}-1-4{
     		width: 1/4 * 100%;
     	}
 
-        .row > .col--#{$screensize}-fifth{
+        .row > .col--#{$screensize}-1-5{
             width: 1/5 * 100%;
         }
 
-        .row > .col--#{$screensize}-sixth{
+        .row > .col--#{$screensize}-1-6{
             width: 1/6 * 100%;
         }
 
-        .row > .col--#{$screensize}-seventh{
+        .row > .col--#{$screensize}-1-7{
             width: 1/7 * 100%;
         }
 
-        .row > .col--#{$screensize}-eighth{
+        .row > .col--#{$screensize}-1-8{
             width: 1/8 * 100%;
         }
 

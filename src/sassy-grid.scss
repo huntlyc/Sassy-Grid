@@ -79,149 +79,50 @@ $minMaxWidth: min-width;
 }
 
 
-.row > .col--xs-1-1,
-.row > .col--xs-1-2,
-.row > .col--xs-1-3,
-.row > .col--xs-1-4,
-.row > .col--xs-1-5,
-.row > .col--xs-1-6,
-.row > .col--xs-1-7,
-.row > .col--xs-1-8{
+.row > .col{
     padding-right: $gutter;
     padding-left: 0;
 }
 
 //If double padded, padd left and right by half gutter val
-.row--double-padded > .col--xs-1-1,
-.row--double-padded > .col--xs-1-2,
-.row--double-padded > .col--xs-1-3,
-.row--double-padded > .col--xs-1-4,
-.row--double-padded > .col--xs-1-5,
-.row--double-padded > .col--xs-1-6,
-.row--double-padded > .col--xs-1-7,
-.row--double-padded > .col--xs-1-8{
+.row--double-padded > .col{
     padding-left: $gutter / 2;
     padding-right: $gutter / 2;
 }
 
 //If double padded, padd left and right by half gutter val
-.row--no-gutters > .col--xs-1-1,
-.row--no-gutters > .col--xs-1-2,
-.row--no-gutters > .col--xs-1-3,
-.row--no-gutters > .col--xs-1-4,
-.row--no-gutters > .col--xs-1-5,
-.row--no-gutters > .col--xs-1-6,
-.row--no-gutters > .col--xs-1-7,
-.row--no-gutters > .col--xs-1-8{
+.row--no-gutters > .col{
     padding-left: 0;
     padding-right: 0;
 }
 
-//From here - pretty straight forward
-.row > .col--xs-1-1{
-    width: 100%;
+//Do XS first
+@for $denominator from 1 through 8{
+    @for $numerator from 1 through $denominator{
+        .col--xs-#{$numerator}-#{$denominator}{
+            @if $numerator == $denominator{
+                width: 100%;
+            } @else {
+                width: $numerator / $denominator * 100%;
+            }
+        }
+    }
 }
 
-.row > .col--xs-1-2{
-    width: 1/2 * 100%;
-}
 
-.row > .col--xs-1-3{
-    width: 1/3 * 100%;
-}
-
-.row > .col--xs-1-4{
-    width: 1/4 * 100%;
-}
-
-.row > .col--xs-1-5{
-    width: 1/5 * 100%;
-}
-
-.row > .col--xs-1-6{
-    width: 1/6 * 100%;
-}
-
-.row > .col--xs-1-7{
-    width: 1/7 * 100%;
-}
-
-.row > .col--xs-1-8{
-    width: 1/8 * 100%;
-}
-
+//Loop through breakpoints
 @each $screensize, $cuttoff in $breakpoints{
     @media (min-width: $cuttoff){
-        //By default padd all cols to the left only
-        .row > .col--#{$screensize}-1-1,
-    	.row > .col--#{$screensize}-1-2,
-    	.row > .col--#{$screensize}-1-3,
-    	.row > .col--#{$screensize}-1-4,
-        .row > .col--#{$screensize}-1-5,
-        .row > .col--#{$screensize}-1-6,
-        .row > .col--#{$screensize}-1-7,
-        .row > .col--#{$screensize}-1-8{
-    		padding-right: $gutter;
-    		padding-left: 0;
-    	}
-
-        //If double padded, padd left and right by half gutter val
-        .row--double-padded > .col--#{$screensize}-1-1,
-    	.row--double-padded > .col--#{$screensize}-1-2,
-    	.row--double-padded > .col--#{$screensize}-1-3,
-    	.row--double-padded > .col--#{$screensize}-1-4,
-        .row--double-padded > .col--#{$screensize}-1-5,
-        .row--double-padded > .col--#{$screensize}-1-6,
-        .row--double-padded > .col--#{$screensize}-1-7,
-        .row--double-padded > .col--#{$screensize}-1-8{
-    		padding-left: $gutter / 2;
-    		padding-right: $gutter / 2;
-    	}
-
-        //If double padded, padd left and right by half gutter val
-        .row--no-gutters > .col--#{$screensize}-1-1,
-        .row--no-gutters > .col--#{$screensize}-1-2,
-        .row--no-gutters > .col--#{$screensize}-1-3,
-        .row--no-gutters > .col--#{$screensize}-1-4,
-        .row--no-gutters > .col--#{$screensize}-1-5,
-        .row--no-gutters > .col--#{$screensize}-1-6,
-        .row--no-gutters > .col--#{$screensize}-1-7,
-        .row--no-gutters > .col--#{$screensize}-1-8{
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        //From here - pretty straight forward
-    	.row > .col--#{$screensize}-1-1{
-    		width: 100%;
-    	}
-
-    	.row > .col--#{$screensize}-1-2{
-    		width: 1/2 * 100%;
-    	}
-
-    	.row > .col--#{$screensize}-1-3{
-    		width: 1/3 * 100%;
-    	}
-
-    	.row > .col--#{$screensize}-1-4{
-    		width: 1/4 * 100%;
-    	}
-
-        .row > .col--#{$screensize}-1-5{
-            width: 1/5 * 100%;
-        }
-
-        .row > .col--#{$screensize}-1-6{
-            width: 1/6 * 100%;
-        }
-
-        .row > .col--#{$screensize}-1-7{
-            width: 1/7 * 100%;
-        }
-
-        .row > .col--#{$screensize}-1-8{
-            width: 1/8 * 100%;
+        @for $denominator from 1 through 8{
+            @for $numerator from 1 through $denominator{
+            	.col--#{$screensize}-#{$numerator}-#{$denominator}{
+            		@if $numerator == $denominator{
+                        width: 100%;
+                    } @else {
+                        width: $numerator / $denominator * 100%;
+                    }
+            	}
+            }
         }
 
         .hiden-#{$screensize}{

@@ -109,6 +109,12 @@ $minMaxWidth: min-width;
     }
 }
 
+@media (max-width: 480px){
+    .hidden-xs{
+        display: none
+    }
+}
+
 
 //Loop through breakpoints
 @each $screensize, $cuttoff in $breakpoints{
@@ -125,7 +131,7 @@ $minMaxWidth: min-width;
             }
         }
 
-        .hiden-#{$screensize}{
+        .hidden-#{$screensize}{
             display: none;
         }
 

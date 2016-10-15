@@ -44,6 +44,7 @@
 .row {
   padding: 0 0 0 40px; }
 
+.row.row--double-padded,
 .row.row--no-gutters {
   padding: 0; }
 

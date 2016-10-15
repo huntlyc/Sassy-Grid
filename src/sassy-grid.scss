@@ -18,9 +18,9 @@ $minMaxWidth: min-width;
 .container,
 .row,
 .col {
-	margin: 0;
-	padding: 0;
-  	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container:before,
@@ -46,19 +46,19 @@ $minMaxWidth: min-width;
 }
 
 .container{
-	display: block;
-	width: 100%;
-	margin: 0 auto;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .container--max-width{
-	max-width: $max-width;
+    max-width: $max-width;
 }
 
 .col,
 .row{
     display: block;
-	width: 100%;
+    width: 100%;
 }
 
 .col{
@@ -70,6 +70,7 @@ $minMaxWidth: min-width;
     padding: 0 0 0 $gutter;
 }
 
+.row.row--double-padded,
 .row.row--no-gutters{
     padding: 0;
 }
@@ -121,13 +122,13 @@ $minMaxWidth: min-width;
     @media (min-width: $cuttoff){
         @for $denominator from 1 through 8{
             @for $numerator from 1 through $denominator{
-            	.col--#{$screensize}-#{$numerator}-#{$denominator}{
-            		@if $numerator == $denominator{
+                .col--#{$screensize}-#{$numerator}-#{$denominator}{
+                    @if $numerator == $denominator{
                         width: 100%;
                     } @else {
                         width: $numerator / $denominator * 100%;
                     }
-            	}
+                }
             }
         }
 

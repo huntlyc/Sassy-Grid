@@ -3,12 +3,12 @@ layout: default
 ---
 <section class="service-overview container container--max-width">
 	<div class="row">
-		<div class="col col--xs-full">
+		<div class="col col--xs-1-1">
 			<h1>This grid is cool because of things...</h1>
 		</div>
 	</div>
 	<div class="row row--double-padded grid-points">
-		<div class="col col--sm-full col--md-third">
+		<div class="col col--sm-1-1 col--md-1-3">
 			<article>
 				<i class="fa fa-bolt" aria-hidden="true"></i>
 				<h1>Yet <em>another</em> grid</h1>
@@ -16,15 +16,15 @@ layout: default
 				<a class="btn" href="grid.html">View Examples</a>
 			</article>
 		</div>
-		<div class="col col--sm-full col--md-third">
+		<div class="col col--sm-1-1 col--md-1-3">
 			<article>
 				<i class="fa fa-css3" aria-hidden="true"></i>
 				<h1>Saas/CSS</h1>
 				<p>Created using <a target="_blank" href="http://sass-lang.com/">Sass!</a> If you're sassy, <strong>@import</strong>, <strong>@extend</strong>, and feel the <i class="fa fa-heart" style="padding: 0; font-size: 1em; color: #ffaebc;"></i></p>
-				<a class="btn" href="grid.html">View Examples</a>
+				<a class="btn" href="{{ "/docs/" | prepend: site.baseurl }}">Documentation</a>
 			</article>
 		</div>
-		<div class="col col--sm-full col--md-third">
+		<div class="col col--sm-1-1 col--md-1-3">
 			<article>
 				<i class="fa fa-code-fork" aria-hidden="true"></i>
 				<h1>Fork Me!</h1>
@@ -39,60 +39,60 @@ layout: default
     <h2>Default grid with <em>.container--max-width</em> to limit width to 1170px</h2>
 	<div class="container container--max-width">
         <div class="row">
-            <div class="col col--sm-full">
+            <div class="col col--sm-1-1">
 				<div class="item">
-					<span>full</span>
+					<span>col--sm-1-1</span>
 				</div>
 			</div>
         </div>
         <div class="row">
-            <div class="col col--sm-half">
+            <div class="col col--sm-1-2">
 				<div class="item">
-					<span>half</span>
+					<span>col--sm-1-2</span>
 				</div>
 			</div>
-            <div class="col col--sm-half">
+            <div class="col col--sm-1-2">
 				<div class="item">
-					<span>half</span>
-				</div>
-			</div>
-        </div>
-        <div class="row">
-            <div class="col col--sm-third">
-				<div class="item">
-					<span>third</span>
-				</div>
-			</div>
-            <div class="col col--sm-third">
-				<div class="item">
-					<span>third</span>
-				</div>
-			</div>
-            <div class="col col--sm-third">
-				<div class="item">
-					<span>third</span>
+					<span>col--sm-1-2</span>
 				</div>
 			</div>
         </div>
         <div class="row">
-            <div class="col col--sm-quarter">
+            <div class="col col--sm-1-3">
 				<div class="item">
-					<span>quarter</span>
+					<span>col--sm-1-3</span>
 				</div>
 			</div>
-            <div class="col col--sm-quarter">
+            <div class="col col--sm-1-3">
 				<div class="item">
-					<span>quarter</span>
+					<span>col--sm-1-3</span>
 				</div>
 			</div>
-            <div class="col col--sm-quarter">
+            <div class="col col--sm-1-3">
 				<div class="item">
-					<span>quarter</span>
+					<span>col--sm-1-3</span>
 				</div>
 			</div>
-            <div class="col col--sm-quarter">
+        </div>
+        <div class="row">
+            <div class="col col--sm-1-4">
 				<div class="item">
-					<span>quarter</span>
+					<span>col--sm-1-4</span>
+				</div>
+			</div>
+            <div class="col col--sm-1-4">
+				<div class="item">
+					<span>col--sm-1-4</span>
+				</div>
+			</div>
+            <div class="col col--sm-1-4">
+				<div class="item">
+					<span>col--sm-1-4</span>
+				</div>
+			</div>
+            <div class="col col--sm-1-4">
+				<div class="item">
+					<span>col--sm-1-4</span>
 				</div>
 			</div>
         </div>
@@ -103,45 +103,45 @@ layout: default
 	<h2><strong>Note:</strong> Intrepid viewers will note the div.item > span wrapper around column text has been removed as it's for example style purposes only</h2>
 	<div class="container container--max-width">
         <div class="row">
-            <div class="col col--no-border col--sm-full">
+            <div class="col col--no-border col--sm-1-1">
 {% highlight html %}
 	<div class="container container--max-width">
 	    <div class="row">
-	        <div class="col col--sm-full">
-	            full
+	        <div class="col col--sm-1-1">
+	            col--sm-1-1
 	        </div>
 	    </div>
 	    <div class="row">
-	        <div class="col col--sm-half">
-	            half
+	        <div class="col col--sm-1-2">
+	            col--sm-1-2
 	        </div>
-	        <div class="col col--sm-half">
-	            half
-	        </div>
-	    </div>
-	    <div class="row">
-	        <div class="col col--sm-third">
-	            third
-	        </div>
-	        <div class="col col--sm-third">
-	            third
-	        </div>
-	        <div class="col col--sm-third">
-	            third
+	        <div class="col col--sm-1-2">
+	            col--sm-1-2
 	        </div>
 	    </div>
 	    <div class="row">
-	        <div class="col col--sm-quarter">
-	            quarter
+	        <div class="col col--sm-1-3">
+	            col--sm-1-3
 	        </div>
-	        <div class="col col--sm-quarter">
-	            quarter
+	        <div class="col col--sm-1-3">
+	            col--sm-1-3
 	        </div>
-	        <div class="col col--sm-quarter">
-	            quarter
+	        <div class="col col--sm-1-3">
+	            col--sm-1-3
 	        </div>
-	        <div class="col col--sm-quarter">
-	            quarter
+	    </div>
+	    <div class="row">
+	        <div class="col col--sm-1-4">
+	            col--sm-1-4
+	        </div>
+	        <div class="col col--sm-1-4">
+	            col--sm-1-4
+	        </div>
+	        <div class="col col--sm-1-4">
+	            col--sm-1-4
+	        </div>
+	        <div class="col col--sm-1-4">
+	            col--sm-1-4
 	        </div>
 	    </div>
 	</div>
@@ -153,7 +153,7 @@ layout: default
 <section>
 	<div class="container container--max-width">
 		<div class="row">
-			<div class="col col--no-border col--sm-full">
+			<div class="col col--no-border col--sm-1-1">
 				<h2>Want to see more?&nbsp;&nbsp;<a href="{{ "/docs/" | prepend: site.baseurl }}" class="btn"><i class="fa fa-book"></i> View Docs</a></h2>
 			</div>
 		</div>
@@ -162,12 +162,12 @@ layout: default
 
 <!-- <section class="container container--instagram">
 	<div class="row">
-		<div class="col col--xs-full">
+		<div class="col col--xs-1-1">
 			<h1>As seen on... <small>(ahem... <em>just here...</em> for now)!</small></h1>
 		</div>
 	</div>
 	<div class="row row--no-gutters pic-feed">
-		<div class="col col--lg-half col--md-half col--sm-half col--xs-full"><a href="grid.html"><img src="{{ "/img/ex1.jpg" | prepend: site.baseurl }}" alt="Example 1" class="responsive"></a></div>
-		<div class="col col--lg-half col--md-half col--sm-half col--xs-full"><a href="grid.html"><img src="{{ "/img/ex2.jpg" | prepend: site.baseurl }}" alt="Example 2" class="responsive"></a></div>
+		<div class="col col--lg-half col--md-half col--sm-1-2 col--xs-1-1"><a href="grid.html"><img src="{{ "/img/ex1.jpg" | prepend: site.baseurl }}" alt="Example 1" class="responsive"></a></div>
+		<div class="col col--lg-half col--md-half col--sm-1-2 col--xs-1-1"><a href="grid.html"><img src="{{ "/img/ex2.jpg" | prepend: site.baseurl }}" alt="Example 2" class="responsive"></a></div>
 	</div>
 </section> -->

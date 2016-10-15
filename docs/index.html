@@ -5,7 +5,7 @@ layout: default
     <section class="a-wee-story">
         <div class="container container--max-width">
             <div class="row">
-                <div class="col--sm-full">
+                <div class="col--sm-1-1">
                     <h1>About this wee project...</h1>
                     <p>
                         This little grid system was born out of conflict between those that want double padding on their grid using <a target="_blank" href="https://getboostrap.com">a very well known framework</a> and those that wanted a little more customization.
@@ -26,7 +26,7 @@ layout: default
     <section class="grid-intro">
         <div class="container container--max-width">
             <div class="row">
-                <div class="col--sm-full">
+                <div class="col--sm-1-1">
                     <h1>The Sassy Grid</h1>
                     <p>
                         By default this grid is <strong>a fluid full width</strong> grid.  Once it hits <strong>below 480px (large mobile)</strong>, it stacks all columns as full width.  <strong>There is no mobile columns by default - you'll have to add your own as needed</strong>.
@@ -73,7 +73,7 @@ layout: default
     <section class="a-wee-story">
         <div class="container container--max-width">
             <div class="row">
-                <div class="col--sm-full">
+                <div class="col--sm-1-1">
                     <h1>Now, for the examples...</h1>
                     <p>
                         You'll need to inspect the soucre to see the classes used, note the <em>div.item>span</em> in each <em>.col</em> is only here for presentational purposes and is not required.
@@ -85,48 +85,71 @@ layout: default
 </article>
 <section class="grid-examples">
     <h1>Full Grid</h1>
-    <h2>Default: 40px padding left only - skiping first col of row</h2>
+    <h2>Using no gutter rows</h2>
+    <div class="container">
+        <div class="row row--no-gutters">
+            <div class="col col--sm-1-1"><div class="item"><span>col--sm-1-1</span></div></div>
+        </div>
+        <div class="row row--no-gutters">
+            <div class="col col--sm-1-2"><div class="item"><span>col--sm-1-2</span></div></div>
+            <div class="col col--sm-1-2"><div class="item"><span>col--sm-1-2</span></div></div>
+        </div>
+        <div class="row row--no-gutters">
+            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
+            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
+            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
+        </div>
+        <div class="row row--no-gutters">
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+        </div>
+    </div>
+
+    <h1>Full Grid</h1>
+    <h2>Default: Because of default row gutter, essentially a double padded grid</h2>
     <div class="container">
         <div class="row">
-            <div class="col col--sm-full"><div class="item"><span>full</span></div></div>
+            <div class="col col--sm-1-1"><div class="item"><span>col--sm-1-1</span></div></div>
         </div>
         <div class="row">
-            <div class="col col--sm-half"><div class="item"><span>half</span></div></div>
-            <div class="col col--sm-half"><div class="item"><span>half</span></div></div>
+            <div class="col col--sm-1-2"><div class="item"><span>col--sm-1-2</span></div></div>
+            <div class="col col--sm-1-2"><div class="item"><span>col--sm-1-2</span></div></div>
         </div>
         <div class="row">
-            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
-            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
-            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
+            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
+            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
+            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
         </div>
         <div class="row">
-            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
         </div>
     </div>
 
     <h1>Max Width Grid</h1>
-    <h2>Default: 1170px</h2>
+    <h2>Default: 1170px using no gutter rows</h2>
     <div class="container container--max-width">
-        <div class="row">
-            <div class="col col--sm-full"><div class="item"><span>full</span></div></div>
+        <div class="row row--no-gutters">
+            <div class="col col--sm-1-1"><div class="item"><span>col--sm-1-1</span></div></div>
         </div>
-        <div class="row">
-            <div class="col col--sm-half"><div class="item"><span>half</span></div></div>
-            <div class="col col--sm-half"><div class="item"><span>half</span></div></div>
+        <div class="row row--no-gutters">
+            <div class="col col--sm-1-2"><div class="item"><span>col--sm-1-2</span></div></div>
+            <div class="col col--sm-1-2"><div class="item"><span>col--sm-1-2</span></div></div>
         </div>
-        <div class="row">
-            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
-            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
-            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
+        <div class="row row--no-gutters">
+            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
+            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
+            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
         </div>
-        <div class="row">
-            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
+        <div class="row row--no-gutters">
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
         </div>
     </div>
 
@@ -134,78 +157,78 @@ layout: default
     <h2>Default: 1170px wide with 20px gutter each side</h2>
     <div class="container container--max-width">
         <div class="row row--double-padded">
-            <div class="col col--sm-full"><div class="item"><span>full</span></div></div>
+            <div class="col col--sm-1-1"><div class="item"><span>col--sm-1-1</span></div></div>
         </div>
         <div class="row row--double-padded">
-            <div class="col col--sm-half"><div class="item"><span>half</span></div></div>
-            <div class="col col--sm-half"><div class="item"><span>half</span></div></div>
+            <div class="col col--sm-1-2"><div class="item"><span>col--sm-1-2</span></div></div>
+            <div class="col col--sm-1-2"><div class="item"><span>col--sm-1-2</span></div></div>
         </div>
         <div class="row row--double-padded">
-            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
-            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
-            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
+            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
+            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
+            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
         </div>
         <div class="row row--double-padded">
-            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
         </div>
     </div>
 
     <h1>Nested Example</h1>
-    <h2>Default grid with nested doule padded and default grid</h2>
+    <h2>Default grid with nested doule padded and no-gutter row default grid</h2>
     <div class="container">
         <div class="row">
-            <div class="col col--sm-full"><div class="item"><span>full</span></div></div>
+            <div class="col col--sm-1-1"><div class="item"><span>col--sm-1-1</span></div></div>
         </div>
         <div class="row">
-            <div class="col col--sm-half">
+            <div class="col col--sm-1-2">
                 <div class="item">
-                    <span>half</span>
+                    <span>col--sm-1-2</span>
                     <div class="container">
                         <div class="row row--double-padded">
-                            <div class="col col--sm-full"><div class="item"><span>full</span></div></div>
+                            <div class="col col--sm-1-1"><div class="item"><span>col--sm-1-1</span></div></div>
                         </div>
                         <div class="row row--double-padded">
-                            <div class="col col--sm-half"><div class="item"><span>half</span></div></div>
-                            <div class="col col--sm-half"><div class="item"><span>half</span></div></div>
+                            <div class="col col--sm-1-2"><div class="item"><span>col--sm-1-2</span></div></div>
+                            <div class="col col--sm-1-2"><div class="item"><span>col--sm-1-2</span></div></div>
                         </div>
                         <div class="row row--double-padded">
-                            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
-                            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
-                            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
+                            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
+                            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
+                            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
                         </div>
                         <div class="row row--double-padded">
-                            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-                            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-                            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-                            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
+                            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+                            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+                            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+                            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col col--sm-half">
+            <div class="col col--sm-1-2">
                 <div class="item">
-                    <span>half</span>
+                    <span>col--sm-1-2</span>
                     <div class="container">
-                        <div class="row">
-                            <div class="col col--sm-full"><div class="item"><span>full</span></div></div>
+                        <div class="row row--no-gutters">
+                            <div class="col col--sm-1-1"><div class="item"><span>col--sm-1-1</span></div></div>
                         </div>
-                        <div class="row">
-                            <div class="col col--sm-half"><div class="item"><span>half</span></div></div>
-                            <div class="col col--sm-half"><div class="item"><span>half</span></div></div>
+                        <div class="row row--no-gutters">
+                            <div class="col col--sm-1-2"><div class="item"><span>col--sm-1-2</span></div></div>
+                            <div class="col col--sm-1-2"><div class="item"><span>col--sm-1-2</span></div></div>
                         </div>
-                        <div class="row">
-                            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
-                            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
-                            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
+                        <div class="row row--no-gutters">
+                            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
+                            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
+                            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
                         </div>
-                        <div class="row">
-                            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-                            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-                            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-                            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
+                        <div class="row row--no-gutters">
+                            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+                            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+                            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+                            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
                         </div>
                     </div>
                 </div>
@@ -213,15 +236,15 @@ layout: default
             </div>
         </div>
         <div class="row">
-            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
-            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
-            <div class="col col--sm-third"><div class="item"><span>third</span></div></div>
+            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
+            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
+            <div class="col col--sm-1-3"><div class="item"><span>col--sm-1-3</span></div></div>
         </div>
         <div class="row">
-            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
-            <div class="col col--sm-quarter"><div class="item"><span>quarter</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
+            <div class="col col--sm-1-4"><div class="item"><span>col--sm-1-4</span></div></div>
         </div>
     </div>
 </section>

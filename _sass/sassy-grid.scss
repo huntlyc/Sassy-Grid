@@ -1,19 +1,34 @@
-/** Grid Vars **/
-$gutter: 40px;
-$max-width: 1170px;
+// Grid Vars
+$gutter: 40px !default;
+$max-width: 1170px !default;
 
-$breakpoint-sm: 480px;
-$breakpoint-md: 992px;
-$breakpoint-lg: 1024px;
+$breakpoints: (
+    sm: 480px,
+    md: 768px,
+    lg: 980px,
+    xl: 1024px,
+) !default;
 
-/** resets **/
-* {
+//Internal
+$minMaxWidth: min-width;
+
+
+
+// resets
+.container,
+.row,
+.col {
 	margin: 0;
 	padding: 0;
   	box-sizing: border-box;
 }
-*:before,
-*:after {
+
+.container:before,
+.container:after,
+.row:before,
+.row:after,
+.col:before,
+.col:after {
   box-sizing: border-box;
 }
 
@@ -42,193 +57,95 @@ $breakpoint-lg: 1024px;
 
 .col,
 .row{
+    display: block;
 	width: 100%;
 }
 
-
-.row > .col--xs-half,
-.row > .col--xs-third,
-.row > .col--xs-quarter{
-	float: left;
-	padding-left: 0;
+.col{
+    float: left;
+    padding-right: $gutter;
 }
 
-.row > .col--xs-full{
-	width: 100%;
+.row{
+    padding: 0 0 0 $gutter;
 }
 
-.row > .col--xs-half{
-	width: 1/2 * 100%;
+.row.row--double-padded,
+.row.row--no-gutters{
+    padding: 0;
 }
 
-.row > .col--xs-third{
-	width: 1/3 * 100%;
-}
-
-.row > .col--xs-quarter{
-	width: 1/4 * 100%;
-}
-
-@media (max-width: $breakpoint-sm){
-    .row > .col,
-    .row > .col--xs-half,
-    .row > .col--xs-third,
-    .row > .col--xs-quarter{
-        float: none;
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-@media (min-width: $breakpoint-sm){
-	.row > .col--sm-half,
-	.row > .col--sm-third,
-	.row > .col--sm-quarter{
-		float: left;
-		padding-left: $gutter;
-		padding-right: 0;
-	}
-
-    .row > .col--sm-half:first-child,
-    .row > .col--sm-third:first-child,
-    .row > .col--sm-quarter:first-child{
-        padding-left: 0
-    }
-
-    .row--double-padded > .col--sm-full,
-	.row--double-padded > .col--sm-half,
-	.row--double-padded > .col--sm-third,
-	.row--double-padded > .col--sm-quarter{
-		padding-left: $gutter / 2;
-		padding-right: $gutter / 2
-	}
-
-    .row--double-padded > .col--sm-full:first-child,
-    .row--double-padded > .col--sm-half:first-child,
-    .row--double-padded > .col--sm-third:first-child,
-    .row--double-padded > .col--sm-quarter:first-child{
-        padding-left: $gutter / 2;
-    }
-
-	.row > .col--sm-full{
-		width: 100%;
-	}
-
-	.row > .col--sm-half{
-		width: 1/2 * 100%;
-	}
-
-	.row > .col--sm-third{
-		width: 1/3 * 100%;
-	}
-
-	.row > .col--sm-quarter{
-		width: 1/4 * 100%;
-	}
-}
-
-@media (min-width: $breakpoint-md){
-	.row > .col--md-half,
-	.row > .col--md-third,
-	.row > .col--md-quarter{
-		float: left;
-		padding-left: $gutter;
-		padding-right: 0;
-	}
-
-    .row > .col--md-half:first-child,
-    .row > .col--md-third:first-child,
-    .row > .col--md-quarter:first-child{
-        padding-left: 0
-    }
-
-    .row--double-padded > .col--md-full,
-	.row--double-padded > .col--md-half,
-	.row--double-padded > .col--md-third,
-	.row--double-padded > .col--md-quarter{
-		padding-left: $gutter / 2;
-		padding-right: $gutter / 2
-	}
-
-    .row--double-padded > .col--md-full:first-child,
-    .row--double-padded > .col--md-half:first-child,
-    .row--double-padded > .col--md-third:first-child,
-    .row--double-padded > .col--md-quarter:first-child{
-        padding-left: $gutter / 2;
-    }
-
-	.row > .col--md-full{
-		width: 100%;
-	}
-
-	.row > .col--md-half{
-		width: 1/2 * 100%;
-	}
-
-	.row > .col--md-third{
-		width: 1/3 * 100%;
-	}
-
-	.row > .col--md-quarter{
-		width: 1/4 * 100%;
-	}
+.row.row--no-gutters .col{
+    padding-right: 0
 }
 
 
-@media (min-width: $breakpoint-lg){
-	.row > .col--lg-half,
-	.row > .col--lg-third,
-	.row > .col--lg-quarter{
-		float: left;
-		padding-left: $gutter;
-		padding-right: 0;
-	}
-
-    .row > .col--lg-half:first-child,
-    .row > .col--lg-third:first-child,
-    .row > .col--lg-quarter:first-child{
-        padding-left: 0
-    }
-
-    .row--double-padded > .col--lg-full,
-	.row--double-padded > .col--lg-half,
-	.row--double-padded > .col--lg-third,
-	.row--double-padded > .col--lg-quarter{
-		padding-left: $gutter / 2;
-		padding-right: $gutter / 2
-	}
-
-    .row--double-padded > .col--lg-full:first-child,
-    .row--double-padded > .col--lg-half:first-child,
-    .row--double-padded > .col--lg-third:first-child,
-    .row--double-padded > .col--lg-quarter:first-child{
-        padding-left: $gutter / 2;
-    }
-
-	.row > .col--lg-full{
-		width: 100%;
-	}
-
-	.row > .col--lg-half{
-		width: 1/2 * 100%;
-	}
-
-	.row > .col--lg-third{
-		width: 1/3 * 100%;
-	}
-
-	.row > .col--lg-quarter{
-		width: 1/4 * 100%;
-	}
+.row > .col{
+    padding-right: $gutter;
+    padding-left: 0;
 }
 
+//If double padded, padd left and right by half gutter val
+.row--double-padded > .col{
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
+}
+
+//If double padded, padd left and right by half gutter val
 .row--no-gutters > .col{
-	padding-left: 0;
-	padding-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.row > .col--center-me-plz{
-	float: none;
-	padding-left: 0;
-	margin: 0 auto;
+//Do XS first
+@for $denominator from 1 through 8{
+    @for $numerator from 1 through $denominator{
+        .col--xs-#{$numerator}-#{$denominator}{
+            @if $numerator == $denominator{
+                width: 100%;
+            } @else {
+                width: $numerator / $denominator * 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .hidden-xs{
+        display: none
+    }
+}
+
+
+//Loop through breakpoints
+@each $screensize, $cuttoff in $breakpoints{
+    @media (min-width: $cuttoff){
+        @for $denominator from 1 through 8{
+            @for $numerator from 1 through $denominator{
+            	.col--#{$screensize}-#{$numerator}-#{$denominator}{
+            		@if $numerator == $denominator{
+                        width: 100%;
+                    } @else {
+                        width: $numerator / $denominator * 100%;
+                    }
+            	}
+            }
+        }
+
+        .hidden-#{$screensize}{
+            display: none;
+        }
+
+        .visible-xs,
+        .visible-sm,
+        .visible-md,
+        .visible-lg,
+        .visible-xl{
+            display: none !important;
+        }
+
+        .visible-#{$screensize}{
+            display: block !important;
+        }
+    }
 }
